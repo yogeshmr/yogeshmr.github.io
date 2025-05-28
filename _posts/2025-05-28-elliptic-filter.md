@@ -26,7 +26,7 @@ The detailed requirements given in Table 1 are synthesized from the requirement 
 | F2 | 1015 | Hz | Upper stop band edge frequency |
 | MSL | 40 | dB | Minimum Stop band attenuation |
 
-## Mathematical Analysis
+## Mathematical Analysis -1 
 
 The resistance values can be calculated using:
 
