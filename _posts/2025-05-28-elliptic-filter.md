@@ -18,12 +18,12 @@ The detailed requirements given in Table 1 are synthesized from the requirement 
 
 | Parameter | Value | Unit | Parameter Description |
 |-----------|--------|------|----------------------|
-| F0 | 1000 | Hz | Center Frequency |
+| $f_0$ | 1000 | Hz | Center Frequency |
 | PRW | 0.5 (assumed) | dB | Pass Band Ripple Width |
 | K | 1 (assumed) | - | Pass Band Gain |
 | BW | 133.32 (assumed) | Hz | Band Width |
-| F1 | 985 | Hz | Lower stop band edge frequency |
-| F2 | 1015 | Hz | Upper stop band edge frequency |
+| f1 | 985 | Hz | Lower stop band edge frequency |
+| f2 | 1015 | Hz | Upper stop band edge frequency |
 | MSL | 40 | dB | Minimum Stop band attenuation |
 
 
@@ -31,9 +31,21 @@ The detailed requirements given in Table 1 are synthesized from the requirement 
 
 The sixth-order elliptic band reject filter implementation employs a Biquad filter topology. This topology choice is driven by two key advantages: first, biquads naturally support the introduction of zeros, which are fundamental to elliptic filter characteristics; second, they offer superior tuning flexibility during implementation.
 
-## Design Approach
-A sixth-order band reject filter architecture requires six poles and three zeros. The design leverages a well-established transformation technique where a sixth-order band reject elliptic filter can be synthesized using the filter coefficients of a third-order elliptic low-pass filter.
-The required filter coefficients are sourced from "A Handbook of Active Filters" by D.E. Johnson, J.R. Johnson, and H.P. Moore. Specifically, we utilize the coefficients for a third-order low-pass elliptic filter characterized by 0.5 dB passband ripple width (PRW) and 40 dB minimum stopband attenuation (MSL) (ref. page 191 of the book)
+## Design Summary
+
+A biquad band-reject elliptic filter circuit is shown in Figure 1. 
+
+## Figure 1: Circuit diagram of a second order Biquad filter topology 
+![Biquad Band-Reject Elliptic Filter Circuit](/assets/images/2025-05-28-elliptic-filter/image1.png)
+
+1) This circuit can be used to design a second order band-reject stage using coefficients of the first-order stage of a higher order low-pass elliptic filter.
+2) Two of this circuit can be used to design a fourth order band-reject stage using coefficients of a second-order low-pass elliptic filter.
+3) Hence three of this circuit can be used to design a sixth order band-reject filter using coefficients of a third-order low-pass elliptic filter
+4) Similarly an nth order band-reject elliptic filter can be constructred from the coefficients of a (n/2) order low-pass elliptic filter
+
+## Step 1
+
+Table 2 provides the normalized coefficients for a third-order low-pass elliptic filter characterized by 0.5 dB passband ripple width (PRW) and 40 dB minimum stopband attenuation (MSL) (ref. page 191 of the book "A Handbook of Active Filters" by D.E. Johnson, J.R. Johnson, and H.P. Moore.)
 
 ### Table 2: coefficients for a third-order low-pass elliptic filter with 0.5dB PRW and 40 dB MSL
 
@@ -42,55 +54,104 @@ The required filter coefficients are sourced from "A Handbook of Active Filters"
 | 40  | 1.7115 | 9.629215 | 0.580638 | 1.146209 |
 |     |        |          |          | 0.659093 |
 
-The filter coefficients A, B, and C in the first row are for the “second order” stage and the filter coefficient C, in the second row is for the “first order” stage.
+The filter coefficients A, B, and C in the first row are for the “second order” stage and the filter coefficient C, in the second row is for the “first order” stage of the third-order low-pass elliptic filter.
 
-A second order circuit of Biquad filter topology is shown in Figure 1. The ports of input "v_in" and output "BR_out1" is shown in Figure 1. The reference designators of the components used in Figure 1 will be referred in the calculation of their values. These reference designators are having suffix "a" to represent that this is for the first stage. The reference designators of the second and third stage will be suffixed with "b" and “c” respectively. 
+## Step 2
 
-## Figure 1: Circuit diagram of a second order Biquad filter topology 
-![2nd Order Elliptic Filter Circuit](/assets/images/2025-05-28-elliptic-filter/image1.png)
+### A2, E1 and D1 for First stage and Second stage:
 
-The band reject filter that is obtained from the coefficients of “3rd order” low pass filter is of “6th order”. This is because, the "one" second order stage of the low pas filter will yield "two" second order stages of band reject filter and "one first order” stage of the low pass filter will yield "one second order” stage of band reject filter.
+$$Q = \frac{f_o}{BW}$$
 
-The Figure 1 implements one second order stage of the 6th order band reject filter. The same circuit is repeated two more times and cascaded in series as shown in Figure 2 to form a sixth order band reject filter. In Figure 2, input is provided at v_in and output is obtained at BR_out1. The output of first stage BR_out1 is input to the second stage. The output of the second stage BR_out2 is input to the v_in of the third stage. The complete output of the 6th order band reject filter is obtained at the output of the third stage and it is designated as BR_out3. The reference designators of the components in stage 1, 2 and 3 are the same except for the suffix "a", "b" or "c" for the first, second and third stages respectively. 
+$$\omega_o = 2{\pi}f_o$$
 
-### Figure 2: Sixth order band reject elliptic filter composed of three second order stages 
+Select a standard value of $C_1$ (preferably near $10/f_0$ $\mu$F)
 
-![6th Order Elliptic Filter Circuit](/assets/images/2025-05-28-elliptic-filter/image2.png)
+$$C_1 = \frac{10}{f_o} = 10nF$$
 
-The values of the components of the 6th order elliptic band reject filter are calculated in following steps: 
+$$C_2 = C_1 = 10nF $$
 
-## Quality Factor and angular frequency 
+$$R_7 = \frac{1}{\omega_oC_1} = 15915.49$$
 
-The Quality Factor "Q" is the ratio of the center frequency to band width of the notch. It determines the selectivity of the filter. The values for quality factor and angular frequency are calculated in Table 3.
+$$A_2= 1+ \frac{1}{2AQ^2}(1+\sqrt{1+4AQ^2}) = 1.043900$$
 
-| Parameter         | Formula           | Value  | Unit      |
-| ----------------- | ----------------- | ------ | --------- |
-| Quality Factor    | $Q=\frac{f_0}{BW}$   | 7.5    | Unit less |
-| Angular frequency | $W_0=2πf_0$ | 6283.2 | Hz        |
+$$E_1= \frac{1}{B}\sqrt{\frac{C}{2}[1+4CQ^2+\sqrt{(1+4CQ^2)^2-(2BQ)^2}]} = 29.664657$$
 
-## 4th order stage of band reject filter corresponding to 2nd order stage of low pass filter 
-
-The factors A2, E1 and D1 are calculated from the filter coefficients A, B, C of the second order stage of elliptic low pass filter together with the "Q" (quality factor) of the filter to be designed. These three factors are common for the two second order stages of band reject filter corresponding to the one second order stage of low pass filter. The formulas and values for A2, E1 and D1 are given in Table 4.
+$$D_1= \frac{1}{2}[\frac{BE_1}{QC}+(\sqrt{(\frac{BE_1}{QC})^2-4})]= 1.061739$$
 
 
+### First Stage
+$$\alpha = A_2 = 1.043900$$
+$$\beta = \frac{D_1}{E_1} = 0.035791$$
+$$\gamma = D_1^2 = 1.127289$$
 
-<!-- ## Mathematical Analysis -1 
+$$R_1 = \frac{1}{K\beta\omega_oC_1} = 444674.1$$
 
-The resistance values can be calculated using:
+$$R_2 = KR_1 = 444674.1$$
 
-$$R_1 = \frac{1}{K\beta\omega_0C_1}$$
+$$R_3 = \frac{1}{\sqrt{\gamma}\omega_oC_1} = 14990$$
 
-$$R_2 = KR_1$$
+$$R_4 = \frac{R_7}K = 15915.49$$
 
-$$R_3 = \frac{1}{\sqrt{\gamma\omega_0C_1}}$$
+$$R_5=\frac{\sqrt\gamma}{K\alpha\omega_oC_2} = 16187.47$$
 
-Where:
-- $\omega_0$ is the center frequency in rad/s
-- $K$ is the pass band gain
-- $\beta$ and $\gamma$ are filter coefficients
+$$R_6=\frac{C_1R_3}{C_2} = 14990.03$$
 
-The transfer function for this sixth-order elliptic filter is:
+### Second Stage
+$$\alpha = \frac{1}{A_2} = 0.957946$$
+$$\beta = \frac{1}{D_1E_1} = 0.031750$$
+$$\gamma = \frac{1}{D_1^2} = 0.887084$$
 
-$$H(s) = \frac{N(s)}{D(s)}$$
+$$R_1 = \frac{1}{K\beta\omega_oC_1} = 501276.2$$
 
-This filter provides excellent stopband attenuation with minimal passband ripple. -->
+$$R_2 = KR_1 = 501276.2$$
+
+$$R_3 = \frac{1}{\sqrt{\gamma}\omega_oC_1} = 16898.09$$
+
+$$R_4 = \frac{R_7}K = 15915.49$$
+
+$$R_5=\frac{\sqrt\gamma}{K\alpha\omega_oC_2} = 15648.09$$
+
+$$R_6=\frac{C_1R_3}{C_2} = 16898.09$$
+
+### Third Stage
+
+$$\alpha = \gamma = 1$$
+
+$$\beta = \frac{1}{CQ} = 0.202277979$$
+
+$$R_1 = \frac{1}{K\beta\omega_oC_1} = 78675.4$$
+
+$$R_2 = KR_1 = 78675.4$$
+
+$$R_3 = \frac{1}{\sqrt{\gamma}\omega_oC_1} = 15915.49$$
+
+$$R_4 = \frac{R_7}K = 15915.49$$
+
+$$R_5=\frac{\sqrt\gamma}{K\alpha\omega_oC_2} = 15915.49$$
+
+$$R_6=\frac{C_1R_3}{C_2} = 15915.49$$
+
+## Step 3
+
+Select standard values of resistance and capacitances as close as possible to the calculated values and construct the filter
+
+|Ref Des|1st stage|2nd stage|3rd stage|Remarks|
+|-------|---------|-------- |---------|-------|
+| C1    | 10nF    | 10nF    | 10nF    |       | 
+| C2    | 10nF    | 10nF    | 10nF    |       |
+| R7    | 16kΩ    | 16kΩ     |16kΩ    |       |
+| R1    | 442 kΩ | 499 kΩ | 78.7 kΩ  |         |
+| R2    | 442 kΩ | 499 kΩ | 78.7 kΩ  |         |
+| R3    | 15 kΩ  | 16.90  kΩ | 16 kΩ  |         |
+| R4    | 16 kΩ  | 16 kΩ  | 16 kΩ  |         |
+| R5    | 16.2 kΩ  | 15.6 kΩ  | 16 kΩ  |         |
+| R6    | 15 kΩ  | 16.9 kΩ   | 16 kΩ  |         |
+
+## Step 4
+
+Fine tune the filter response by adjusting, R2 to change PRW and R3,R4 to change the center frequency of each of the stages.
+
+The finetuned 6th order band-reject elliptic filter circuit is shown in Figure 2. 
+
+## Figure 2: Circuit diagram of a sixth order Biquad Elliptic band-reject filter 
+![Sixth order Band-Reject Elliptic Filter Circuit](/assets/images/2025-05-28-elliptic-filter/image2.png)
