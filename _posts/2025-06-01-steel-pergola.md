@@ -1,6 +1,6 @@
 ---
 title: "13 ft by 20 ft steel Pergola with Clay Tiles Roof"
-date: 2025-06-01
+date: 2025-05-26
 categories: [DIY, Pergola]
 tags: [Mechanical Engineering, Fabrication, Trellis structure]
 layout: single

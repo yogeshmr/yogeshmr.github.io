@@ -1,6 +1,6 @@
 ---
 title: "Git Process"
-date: 2025-06-01
+date: 2025-02-21
 categories: [Git, Software Development]
 tags: [Version Control]
 layout: single
