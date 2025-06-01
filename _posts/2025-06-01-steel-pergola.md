@@ -94,14 +94,18 @@ Welding of the second rear to front beam on the hanging support. Provided a spac
 
 ![alt text](/assets/images/2025-06-01-steel-pergola/image10.png)
 
-Placed the clay roof tiles with it's 1.5 inch side perpendicular to the rear to front beams as strength achieved is multiple times higher than having the 0.75 inch side perpendicular to the beam.
+Placed the horizontal pipes for supporting clay roof tiles with it's 1.5 inch side perpendicular to the rear to front beams as strength achieved is multiple times higher than having the 0.75 inch side perpendicular to the beam.
 
 ![alt text](/assets/images/2025-06-01-steel-pergola/image11.png)
 
-Partially completed structure. I have left the rear is still empty as I am not sure if I have adequate number of clay roof tiles. I plan to cut and put PUF sheets at the rear.
+Partially completed structure. I have left the rear still empty as I am not sure if I have adequate number of clay roof tiles. I plan to cut and put PUF sheets at the rear if we fall short of clay tiles.
 
 ![alt text](/assets/images/2025-06-01-steel-pergola/image12.png)
 
-Painted the structure with Nippon Smoke grey enamel. We have used smoke grey color for all the remaining structures in the farm. Nippon smoke grey provides slightly better and shinier feel than Asian Paints Smoke grey enamel.
+Painted the structure with Nippon Smoke grey enamel.
 
 ![alt text](/assets/images/2025-06-01-steel-pergola/image13.jpg)
+
+Added triangulation to the front truss to make it truly trellis structure. Also added additional pillar at the center as required to handle the one ton load of the clay tiles:
+
+![alt text](/assets/images/2025-06-01-steel-pergola/image14.jpg)
