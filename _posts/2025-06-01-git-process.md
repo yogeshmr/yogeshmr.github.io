@@ -8,11 +8,11 @@ layout: single
 
 # Mastering Git Workflow and Commands for Beginners
 
-Git is a powerful tool for version control, allowing developers to track changes, collaborate efficiently, and manage codebases effectively. Whether you're working on a personal project or collaborating with a team, understanding a structured Git workflow is essential. In this guide, I'll walk you through a step-by-step Git workflow for managing branches and commits, followed by how to set up a new project in Replit or VS Code using a GitHub repository. I'll also consolidate key Git commands for quick reference.
+Git is a powerful tool for version control, allowing developers to track changes, collaborate efficiently, and manage codebases effectively. Whether you're working on a personal project or collaborating with a team, understanding a structured Git workflow is essential. In this guide, I'll walk you through on how to set up a new project in VS Code  using a GitHub repository and followed by a step-by-step Git workflow for managing branches and commits. I'll also consolidate key Git commands for quick reference.
 
 ## Step 1: Setting Up a New Project in your IDE (VS code or others) from a GitHub Repo
 
-VS Code is a fantastic platform for coding in the browser, and connecting it to a GitHub repository makes version control seamless. Here's how to set up a new project in Replit from a GitHub repo.
+VS Code is a fantastic platform for coding in the browser, and connecting it to a GitHub repository makes version control seamless. Here's how to set up a new project in VS code from a GitHub repo.
 
 ### Create a GitHub Repository
 
@@ -20,7 +20,7 @@ VS Code is a fantastic platform for coding in the browser, and connecting it to 
 2. Mark it private if desired, add a description, and invite collaborators under Settings > Collaborators
 3. Initialize it with a README or leave it empty for now
 
-### Set Up Replit
+### Set Up VS code
 
 In your VS code project, open the shell (Ctrl+back-tick) and run these commands to initialize Git and connect to your GitHub repo:
 
