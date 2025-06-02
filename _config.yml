@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "My Amazing Life" # site title that appears in the masthead and browser tab
+title                    : "My Blog" # site title that appears in the masthead and browser tab
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Yogesh Rangasetty"
-description              : "An amazing website."
+description              : "Workspace for writing and sharing my thoughts, ideas, and projects."
 url                      : "https://yogeshmr.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -114,8 +114,8 @@ analytics:
 # Site Author
 author:
   name             : "Yogesh Rangasetty"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  avatar           : "/assets/images/profile/7134.jpg"
+  bio              : "I am an Engineer!"
   location         : "Bengaluru, India"
   email            : 
   links:
