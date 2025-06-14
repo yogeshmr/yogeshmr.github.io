@@ -22,9 +22,9 @@ Be able to maneuver and park a small hatchback car under the Pergola
 
 |Material | Stock Qty |
 |---------|-----------|
-|0.75 inch by 1.5 inch, 2mm thickness steel rectangular pipes|20 lengths*|
+|0.75 inch by 1.5 inch, 2mm thickness steel rectangular pipes|22 lengths*|
 |1.5 inch by 2.5 inch, 3mm thickness steel rectangular pipes|3 lengths|
-|1.5 inch by 2.5 inch, 3mm thickness steel rectangular pipes|2 nos. of 8ft pieces|
+|1.5 inch by 2.5 inch, 3mm thickness steel rectangular pipes|2 nos. of 8ft pieces, 2 nos. of 5 ft and one 4ft piece|
 |3 inch diameter, 4mm thickness pipe| 3 lengths|
 |4 inch by 4 inch, 2mm thickness rectangular pipe|2 nos. of 6 ft pieces|
 |4 inch by 4 inch, 3mm thickness rectangular pipe|1 no. of 8 ft piece|
@@ -106,6 +106,30 @@ Painted the structure with Nippon Smoke grey enamel.
 
 ![alt text](/assets/images/2025-06-01-steel-pergola/image13.jpg)
 
-Added triangulation to the front truss to make it truly trellis structure. Also added additional pillar at the center as required to handle the one ton load of the clay tiles:
+Added triangulation to the front truss to make it truly trellis structure. Also added additional pillar post at the center to support front truss as required to handle the one ton load of the clay tiles:
 
 ![alt text](/assets/images/2025-06-01-steel-pergola/image14.jpg)
+
+Decided to cover the complete roof with clay tiles. Total load would be 1.2 tonne. The four cross trusses running from rear to front made up of 1.5 inch by 2.5 inch were inadequate.
+
+Using Claude AI, understood that the center two cross-trusses would take 64% of the load. Hence converted them into trellis structure.
+
+Firstly, added a parallel chord 8 inches below the cross-truss. Secondly, to remove the existing deflection on the cross-truss, located a pipe to support the bottom chord and used a car jack to lift the cross-truss and flatten the deflection. Thirdly welded vertical supports between the two chords and fourthly welded the diagonal members.
+
+![alt text](/assets/images/2025-06-01-steel-pergola/image15.jpg)
+
+![alt text](/assets/images/2025-06-01-steel-pergola/image16.png)
+
+Also reinforced the front trellis with additional four diagonals.
+
+![alt text](/assets/images/2025-06-01-steel-pergola/image17.png)
+
+After installing 64% roof tiles from the front, the first and the last cross-truss were deflecting by 18mm while Claude AI recommended not to exceed 20mm deflection. Hence added three point support for them using a 1.5 inch by 1.5 inch square pipe of 3 mm thickness.
+
+![alt text](/assets/images/2025-06-01-steel-pergola/image18.png)
+
+Finally I was confident that the structure can take the 1.2 tonne load of the roof tiles and went ahead covering the remaining portion of the roof.
+
+![alt text](/assets/images/2025-06-01-steel-pergola/image19.jpg)
+
+![alt text](/assets/images/2025-06-01-steel-pergola/image20.jpg)
