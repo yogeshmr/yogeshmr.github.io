@@ -60,9 +60,9 @@ The filter coefficients A, B, and C in the first row are for the “second order
 
 ### A2, E1 and D1 for First stage and Second stage:
 
-$$Q = \frac{f_o}{BW}$$
+$$Q = \frac{f_o}{BW} = 7.519$$
 
-$$\omega_o = 2{\pi}f_o$$
+$$\omega_o = 2{\pi}f_o = 6283.185$$
 
 Select a standard value of $C_1$ (preferably near $10/f_0$ $\mu$F)
 
