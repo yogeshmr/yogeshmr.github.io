@@ -28,7 +28,7 @@ Be able to park a small hatchback car under the Pergola
 |4 inch by 4 inch, 3mm thickness rectangular pipe|1 no. of 8 ft piece|
 |6 inch by 6 inch metal plates of 6 mm thickness| 5|
 |1.06m by 2.6m PUF sheets of 50mm thickness |5 full pieces and one half piece|
-|8 inch by 12 inch Clay roof tiles | approx. 400 nos.|
+|8 inch by 12 inch Clay roof tiles | approx. 600 nos.|
 
 * 1 length = 19ft 9 inch is the standard length of steel pipes and angles sold in India.
 
