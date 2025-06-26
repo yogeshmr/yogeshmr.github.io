@@ -1,3 +1,11 @@
+---
+title: "AI-Powered Product Requirements Specification"
+date: 2025-06-26
+categories: [engineering, product development]
+tags: [requirements, specifications]
+layout: single
+---
+
 # Requirements Specification Generation and Management
 
 With gibivi.ai's spoken language based, requirements specification tool, you can define product requirements in minutes instead of days!
