@@ -56,7 +56,6 @@ Published products by all users are viewable in the Product Marketplace. From he
 ![alt text](/assets/images/2025-06-26-gibivi-marketplace/image8.png)
 
 
-
 # Thank you for your time!
 
 Please email your feedback to yogesh@gibivi.ai
