@@ -62,6 +62,11 @@ Export and download of requirements in multiple formats such as pdf, csv and tex
 
 ![alt text](/assets/images/2025-06-26-gibivi-reqgen/image9.png)
 
+# Accessing the past prompts
+
+The past prompts can be accessed from the left side drawer. From here, the prompt can be renamed, assigned to a product or can be completely deleted.
+
+![alt text](/assets/images/2025-06-26-gibivi-reqgen/image10.png)
 
 
 # Thank you for your time!

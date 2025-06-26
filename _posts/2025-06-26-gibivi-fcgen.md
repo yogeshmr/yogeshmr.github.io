@@ -31,7 +31,7 @@ Naigating across the flowchart is possible with the help of vertical scroll bar 
 
 # Editing the Flowchart
 
-The schemdraw code can be viewed and edited by cliking on the View Source Code button
+The schemdraw code can be viewed and edited by clicking on the View Source Code button
 
 ![alt text](/assets/images/2025-06-26-gibivi-fcgen/image4.png)
 
@@ -44,6 +44,12 @@ https://schemdraw.readthedocs.io/en/stable/usage/placement.html#connecting-eleme
 # Exporting and Download
 
 The flowchart can be exported and downloaded in SVG image format.
+
+# Accessing the past prompts
+
+The past prompts can be accessed from the left side drawer. From here, the prompt can be renamed, assigned to a product or can be completely deleted.
+
+![alt text](/assets/images/2025-06-26-gibivi-fcgen/image5.png)
 
 # Thank you for your time!
 
