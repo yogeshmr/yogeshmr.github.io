@@ -22,6 +22,28 @@ Before providing a spoken language prompt, the tool requires the document info t
 
 The document info need to be setup only for the first time and it will get carried forward to the next prompts and allows editing as well.
 
+Enter the spoken language prompt in the text are and click on Generate Requirements.
+
+The tool calls LLM API, parses the response and fills the requirements under different categories.
+
+![alt text](/assets/images/2025-06-26-gibivi-reqgen/image4.png)
+
+The tool allows viewing a single requirement, or requirements in a category or all requirements under the prompt.
+
+![alt text](/assets/images/2025-06-26-gibivi-reqgen/image5.png)
 
 
+![alt text](/assets/images/2025-06-26-gibivi-reqgen/image6.png)
+
+In this view, the requirements under the category can be exported and downloaded in multiple formats such as pdf, csv and text file formats.
+
+![alt text](/assets/images/2025-06-26-gibivi-reqgen/image7.png)
+
+Export and download of requirements in multiple formats such as pdf, csv and text file formats is possible in category view and all requirements views.
+
+Edit and Delete options are available in category view and all requirements views.
+
+When edits are made, history of changes is stored and can be viewed in the individual requirement view.
+
+![alt text](/assets/images/2025-06-26-gibivi-reqgen/image8.png)
 
