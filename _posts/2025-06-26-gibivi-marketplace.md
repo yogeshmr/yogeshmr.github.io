@@ -28,3 +28,35 @@ Each Product can be viewed, edited, deleted and published to Marketplace from he
 
 # Publishing to Marketplace
 
+A Product can be published to market by filling in a few details such as price, Category and Description.
+
+![alt text](/assets/images/2025-06-26-gibivi-marketplace/image4.png)
+
+User can decide what artifacts associated with the Product are selected while publishing the product to marketplace.
+
+![alt text](/assets/images/2025-06-26-gibivi-marketplace/image5.png)
+
+# Seller Dashboard
+
+Seller Dashboard provides a summary of the sales and earnings.
+
+![alt text](/assets/images/2025-06-26-gibivi-marketplace/image6.png)
+
+
+# My Purchases Dashboard
+
+Purchased products can be viewed in the "My Purchases" dashboard.
+
+![alt text](/assets/images/2025-06-26-gibivi-marketplace/image7.png)
+
+# Product Marketplace
+
+Published products by all users are viewable in the Product Marketplace. From here, the products can be reviewed and purchased.
+
+![alt text](/assets/images/2025-06-26-gibivi-marketplace/image8.png)
+
+
+
+# Thank you for your time!
+
+Please email your feedback to yogesh@gibivi.ai
